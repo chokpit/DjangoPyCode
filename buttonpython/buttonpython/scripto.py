@@ -1,4 +1,6 @@
 import os
+import pathlib
+
 from buttonpython.settings import BASE_DIR
 
 
@@ -7,4 +9,4 @@ from buttonpython.settings import BASE_DIR
 #    return f.readlines()
 
 def func1():
-    return ("wow")
+    return (pathlib.Path(BASE_DIR)/'templates'/'demofile.txt').read_text()
